@@ -1,3 +1,9 @@
+const path = require('path')
+
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
+
 const configuration = {
   build: {
     outputDir: 'build'
@@ -20,4 +26,10 @@ module.exports = {
   indexPath: configuration.index.indexPath,// build以后的index.html的路径
   filenameHashing: configuration.isHasHash.filenameHashing,// build以后的文件名是否有hash值
   lintOnSave: process.env.NODE_ENV !== 'production',//lint 错误在开发时直接显示在浏览器中
+  chainWebpack: config => {
+    config.resolve.alias
+    .set('pages', resolve('src/pages'))
+    .set('components', resolve('src/components'))
+    .set('util', resolve('src/util'))
+  }
 }

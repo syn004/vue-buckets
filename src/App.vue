@@ -11,5 +11,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  #app {
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 245, 245, 1)
+  }
 </style>

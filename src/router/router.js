@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/',
     name: 'index',
-    component: () => import('../components/index/index'), //懒加载路由
+    component: () => import('pages/index/index'), //懒加载路由
     meta: {
       title: '勿忘初心'
     }
