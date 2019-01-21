@@ -1,35 +1,20 @@
 <template>
   <div class="container">
-    <PageHead />
-    <div class="content">
-      <div class="left">
-        <Calendar />
-      </div>
-      <div class="right">
-        我是右边内容
-      </div>
-    </div>
+    <!-- <PageHead /> -->
   </div>
 </template>
 
 <script>
-  import PageHead from 'components/PageHead'
-  import Calendar from 'components/Calendar'
+  // import PageHead from 'components/PageHead'
 
   export default {
-    name: 'index',
     components: {
-      PageHead,
-      Calendar
+      // PageHead
     }
   }
 </script>
 
 <style lang="scss" scoped>
   .container {
-    .content {
-      display: flex;
-      justify-content: space-between;
-    }
   }
 </style>

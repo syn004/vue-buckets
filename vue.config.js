@@ -31,5 +31,6 @@ module.exports = {
     .set('pages', resolve('src/pages'))
     .set('components', resolve('src/components'))
     .set('util', resolve('src/util'))
+    .set('common', resolve('src/common'))
   }
 }

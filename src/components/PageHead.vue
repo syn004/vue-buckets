@@ -1,6 +1,6 @@
 <template >
   <div class="headerContainer">
-    
+    <span class="text">{{text}}</span>
   </div>
 </template>
 
@@ -8,21 +8,10 @@
   export default {
     data() {
       return {
-        showContent: '我不把今天的事情留给明天，因为我知道明天是永远不会来临的。现在就去行动吧！即使我的行动不会带来快乐与成功。但是动而失败总比坐而待毙好。行动也许不会结出快乐的果实，但是没有行动，所有的果实都无法收获!'
+        text: '很多人说我很自信,我不是自信,而是梦想激励着我,青春的年纪不自信,怎叫青春'
       }
     },
     mounted() {
-      // this._renderContent()
-    },
-    methods: {
-      _renderContent() {
-        let _content = this.showContent.split('')
-        _content.map(v => {
-          setTimeout(() => {
-            console.log('vvv', v)
-          }, 1000)
-        })
-      }
     }
   }
 </script>
@@ -30,7 +19,16 @@
 <style lang="scss" scoped>
   .headerContainer {
     width: 100%;
-    height: 200px;
-    background: rgba(135, 206, 235, 1)
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+      padding: 0 0 0 20px;
+      line-height: 40px;
+      background: linear-gradient(to right, rgb(0, 0, 255), rgb(255, 0, 0));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
   }
 </style>

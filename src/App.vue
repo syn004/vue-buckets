@@ -14,6 +14,9 @@ export default {
   #app {
     width: 100%;
     height: 100%;
-    background: rgba(245, 245, 245, 1)
+    background-image: url("./common/image/bg.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
   }
 </style>
