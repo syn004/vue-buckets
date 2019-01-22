@@ -1,20 +1,43 @@
 <template>
   <div class="container">
-    <!-- <PageHead /> -->
+    <div class="loginBtn" @click="loginDialog"></div>
+    <Login v-if="loginShow" />
   </div>
 </template>
 
 <script>
-  // import PageHead from 'components/PageHead'
+  import Login from 'components/DialogLogin'
 
   export default {
+    data() {
+      return {
+        loginShow: false
+      }
+    },
+    methods: {
+      loginDialog() {
+        this.loginShow = true
+      }
+    },
     components: {
-      // PageHead
+      Login
     }
   }
 </script>
 
 <style lang="scss" scoped>
   .container {
+    .loginBtn {
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      width: 32px;
+      height: 32px;
+      background-image: url("../../common/image/login_btn.png");
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+      cursor: pointer;
+    }
+    
   }
 </style>

@@ -9,7 +9,7 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
   font-weight: normal;
   font-family: "Microsoft Yahei";
   box-sizing: border-box;
-  -webkit-tap-highlight-color:transparent;
+  -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   &:hover{
       outline: none;
@@ -20,4 +20,16 @@ html,
 body {
   height: 100%;
   width: 100%;
+}
+
+body {
+  background-image: url("../image/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(220, 220, 220);
+  font-size: 14px;
 }
