@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
+  <div class="login">
     <div class="loginContainer">
       <div class="header"></div>
       <div class="content">
-        <div class="name">用户名<input type="text" placeholder="请输入用户名" :userName="userName" class="userName" /></div>
-        <div>密 &nbsp;&nbsp;码<input type="text" placeholder="请输入密码" :passWord="passWord" class="passWord" /></div>
+        <div class="name">用户名<input type="text" placeholder="请输入用户名" v-model="userName" class="userName" /></div>
+        <div>密 &nbsp;&nbsp;码<input type="password" placeholder="请输入密码" v-model="passWord" class="passWord" /></div>
         <div class="submit" @click="loginIn">登陆</div>
         <div class="inform">
-          <p>注册登陆</p>
+          <p @click="register">注册登陆</p>
           <p>忘记密码?</p>
         </div>
       </div>
@@ -24,20 +24,24 @@ export default {
     }
   },
   methods: {
-    loginIn() {
+    async loginIn() {
       const { userName, passWord } = this
       console.log('xxx', userName, passWord)
       // if (userName === '' || passWord === '') {
       //   alert('用户名和密码不能为空')
       //   return
       // }
+    },
+    async register() {
+      console.log('this', this.$router, 'location', location.href)
+      location.href = location.href + 'register'
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  .container {
+  .login {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -58,7 +62,7 @@ export default {
 
       .header {
         height: 100px;
-        background: rgba(255, 0, 0, 1)
+        background-image: url('../common/image/1.png')
       }
 
       .content {

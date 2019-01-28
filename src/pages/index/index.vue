@@ -27,6 +27,13 @@
 
 <style lang="scss" scoped>
   .container {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../common/image/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     .loginBtn {
       position: absolute;
       right: 40px;
