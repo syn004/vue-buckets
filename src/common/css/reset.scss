@@ -22,7 +22,22 @@ body {
   width: 100%;
 }
 
+body::-webkit-scrollbar {
+  display:none;
+}
+
 input::-webkit-input-placeholder {
   color: rgb(220, 220, 220);
   font-size: 14px;
+}
+
+// 去除chrome 黄色背景
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
 }
