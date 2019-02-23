@@ -8,7 +8,7 @@ const actions = {
   'reduce_count': (context) => {
     context.commit('REDUCE_COUNT')
   },
-  'set_name': (context, payload) => {
+  'set_user': (context, payload) => {
     context.commit('SET_NAME', payload)
   },
   'set_age': (context, payload) => {

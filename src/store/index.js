@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 const state = {
   count: 0,
-  name: '',
+  user: '',
   age: 0
 }
 

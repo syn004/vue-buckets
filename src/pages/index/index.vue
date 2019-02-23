@@ -11,7 +11,7 @@
 
 <script>
   import Login from 'components/DialogLogin'
-  import { getList } from 'api/api'
+  // import { getList } from 'api/api'
 
   export default {
     data() {

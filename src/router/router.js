@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/',
     name: 'index',
-    component: () => import('pages/Index/Index'), //懒加载路由
+    component: () => import('pages/index/index'), //懒加载路由
     meta: {
       title: '勿忘初心'
     }
@@ -19,9 +19,17 @@ const routes = [
   {
     path: '/register',
     name: 'register',
-    component: () => import('pages/RegisterPage/Register'),
+    component: () => import('pages/registerPage/Register'),
     meta: {
       title: '注册页面'
+    }
+  },
+  {
+    path: '/article',
+    name: 'article',
+    component: () => import('pages/article/Article'),
+    meta: {
+      title: '文章页面'
     }
   }
 ]

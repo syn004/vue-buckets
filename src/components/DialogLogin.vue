@@ -13,7 +13,9 @@
         </div>
       </div>
     </div>
-    <Message :msg="prompt"/>
+    <div v-if="showMessage">
+      <Message :msg="prompt"/>
+    </div>
   </div>
 </template>
 
@@ -26,7 +28,8 @@ export default {
     return {
       userName: '',
       passWord: '',
-      prompt: ''
+      prompt: '',
+      showMessage: false
     }
   },
   created() {
@@ -35,9 +38,16 @@ export default {
     async loginIn() {
       const { userName, passWord } = this
       if (userName === '' || passWord === '') {
+        this.showMessage = true
         this.prompt = '用户名和密码不能为空!'
+        setTimeout(() => {
+          this.showMessage = false
+        }, 2000)
         return
       }
+      Cookies.set('user', userName)
+      this.$store.dispatch('set_user', userName)
+      location.href = location.href + 'article'
     },
     async register() {
       location.href = location.href + 'register'

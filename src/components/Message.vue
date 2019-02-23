@@ -1,6 +1,6 @@
 <template>
   <div class="message">
-    {{msg}}
+    <div class="content">{{msg}}</div>
   </div>
 </template>
 
@@ -14,10 +14,19 @@ export default {
 
 <style lang="scss" scoped>
   .message {
+    width: 100%;
     position: fixed;
     bottom: 10px;
-    margin: 0 auto;
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+
+    .content {
+      width: 200px;
+      margin: 0 auto;
+      background: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+      padding: 8px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
   }
 </style>

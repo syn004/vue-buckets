@@ -8,8 +8,8 @@ const mutations = {
   'REDUCE_COUNT': (state) => {
     state.count --
   },
-  'SET_NAME': (state, name) => {
-    state.name = name
+  'SET_NAME': (state, user) => {
+    state.user = user
   },
   'SET_AGE': (state, age) => {
     state.age = age
